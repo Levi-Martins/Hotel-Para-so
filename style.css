@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --texto: 'Open Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--texto);
+}
+
+nav,ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+a:hover{
+    opacity: 1;
+}
+/* HEADER */
+header{
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+}
+
+header img{
+    width: 200px;
+}
+
+header nav{
+    display: flex;
+}
+
+header li{
+    margin: 0px 15px;
+}
+
+/* Serve para fazer uma declaração que se aplique somente no primeiro li do header */
+header li:first-child{
+    margin-left: 0;
+}
+
+/* Serve para fazer uma declaração que se aplique somente no último li do header */
+header li:last-child{
+    margin-right: 0;
+}
+
+header li a{
+    color: #191c03;
+}
+
+@media (max-width: 570px){
+    header{
+        flex-direction: column;
+    }
+
+    header img{
+        margin-bottom: 15px;
+    }
+}
+
+/* HERO */
+.hero{
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media(max-width:400px){
+    .hero{
+        background-size: 100% 90%;
+        background-repeat: no-repeat;
+    }
+
+    .hero h1{
+        margin-top: 15px;
+    }
+}
+
+.hero h1{
+    font-size: 3.2em;
+    margin-bottom: 15px;
+}
+
+.hero h3{
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.hero .btn{
+    background-color: white;
+    border-radius: 4px;
+    color: #191c03;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+@media(max-width: 700px){
+    .hero h1{
+        font-size: 2.5em;
+    }
+    .hero h3{
+        font-size: 1.5em;
+    }
+}
+
+/* Conheça o Hotel */
+
+.conheca-o-hotel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+    width: 100%;
+}
+
+.conheca-o-hotel h3{
+    font-size: 2em;
+    margin-bottom: 35px;  
+    text-align: center;
+    color: #191c03 
+}
+
+.conheca-o-hotel p{
+    max-width: 800px;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #191c03;
+}
+
+.conheca-o-hotel hr{
+    width: 200px;
+    height: 2px;
+    background-color: #191c03;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 30px 30px;
+}
+
+.small1{
+    height: 366px;
+    width: 35vw;
+    /* 500px */
+    border-radius: 5px;
+}
+.large1{
+    width: 48vw;
+    /* 800px */
+    height: 366px;
+    border-radius: 5px;
+}
+
+.large2{
+    height: 366px;
+    width: 48vw;
+    /* 750px */
+    border-radius: 5px;
+}
+
+.small2{
+    width: 35vw;
+    /* 550px */
+    height: 366px;
+    border-radius: 5px;
+}
+
+@media (max-width:899px){
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        gap: 20px 30px;
+    }
+    .small1{
+        height: 366px;
+        width: 70vw;
+        /* 500px */
+        border-radius: 5px;
+    }
+    .large1{
+        width: 90vw;
+        /* 800px */
+        height: 366px;
+        border-radius: 5px;
+    }
+    
+    .large2{
+        height: 366px;
+        width: 90vw;
+        /* 750px */
+        border-radius: 5px;
+    }
+    
+    .small2{
+        width: 80vw;
+        /* 550px */
+        height: 366px;
+        border-radius: 5px;
+    }
+}
+
+/* CARACTERISTICAS */
+.caracteristicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+    width: 100%;
+    background-color: #191c03;
+}
+
+.caracteristicas h3{
+    font-size: 2.5em;
+    margin-bottom: 35px;  
+    text-align: center;
+    color: white; 
+}
+
+.caracteristicas p{
+    max-width: 800px;
+    margin-bottom: 35px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+.caracteristicas hr{
+    width: 200px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.caracteristicas .grid{
+    display: flex;
+    width: 100%;
+}
+
+.caracteristicas .grid li{
+    padding: 0 30px;
+    text-align: center;
+    max-width: 450px;
+}
+
+.caracteristicas .grid li img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li h4{
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.newsletter h3{
+    font-size: 2.5em;
+    margin-bottom: 35px;  
+    text-align: center;
+    color: #c3c63b; 
+}
+
+.newsletter p{
+    max-width: 800px;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #c3c63b;
+    font-size: 1.2em;
+}
+
+.newsletter hr{
+    width: 200px;
+    height: 2px;
+    background-color:#c3c63b;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.newsletter form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
+}
+
+.newsletter input{
+    padding: 15px;
+    border: 1px solid #c3c63b;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex-grow: 1;
+}
+
+.newsletter button{
+    padding: 15px;
+    background-color: #c3c63b;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width:510px) {
+    .newsletter button{
+        margin-top: 15px;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #191c03;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    color: #c3c63b;
+}
+
+footer li a{
+    position: relative;
+}
+
+footer li a .face{
+    position: absolute;
+    bottom: 15px;
+    right: 110px;
+}
+
+footer li a .tt{
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+
+footer li a .snap{
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+
+}
+
+footer li a .pint{
+    position: absolute;
+    bottom: 15px;
+    left: 100px;
+}
+
+footer p{
+    font-size: 1.1em;
+}
